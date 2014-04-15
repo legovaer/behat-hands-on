@@ -39,9 +39,18 @@ class FeatureContext extends MinkContext
      * @Given /^I click on "([^"]*)"$/
      */
     public function iClickOn($argument) {
-        $page = $this->getSession()->getPage();
-        $page->find('css',$argument)->click();
+        $session = $this->getSession();
+        $element = $session->getPage()->find(
+            'xpath',
+            $session->getSelectorsHandler()->selectorToXpath('css',$argument)
+        );
+        if (null === $element) {
+            throw new \InvalidArgumentException(sprintf('Could not evaluate CSS Selector: "%s"', $argument));
+        }
+
+        $element->click();
     }
+
 
 //
 // Place your definition and hook methods here:
