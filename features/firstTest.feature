@@ -5,5 +5,6 @@ Feature: Analyze wiki page
 
 Scenario: Find a link and click on it
   Given I am on the homepage
+  Then print current url
   Then I should see "A continual improvement process"
 
