@@ -35,6 +35,14 @@ class FeatureContext extends MinkContext
         // Initialize your context here
     }
 
+    /**
+     * @Given /^I click on "([^"]*)"$/
+     */
+    public function iClickOn($argument) {
+        $page = $this->getSession()->getPage();
+        $page->find('css',$argument)->click();
+    }
+
 //
 // Place your definition and hook methods here:
 //
