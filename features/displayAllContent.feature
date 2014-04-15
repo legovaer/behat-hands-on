@@ -5,5 +5,5 @@ Feature: Displaying all content on the frontpage
 
 @javascript  
 Scenario: Show Levi's resume
- When I click on "Resume"
+ When I follow "Resume"
  Then I should see "Consultant @ Capgemini"
