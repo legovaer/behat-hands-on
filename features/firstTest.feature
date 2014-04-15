@@ -3,6 +3,7 @@ Feature: Analyze wiki page
   As a tester
   I need to write a first test
 
+@javascript
 Scenario: Find a link and click on it
   Given I am on the homepage
   Then print current URL
