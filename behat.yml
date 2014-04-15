@@ -1,0 +1,11 @@
+default:
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url: "http://legovaer.be"
+      goutte: ~
+
+jenkins:
+   formatter:
+       name: pretty,junit,html
+       parameters:
+           output_path: null,xml/junit,html/behat_report.html
