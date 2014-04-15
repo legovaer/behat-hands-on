@@ -3,7 +3,9 @@
         "behat/behat": "2.4.*@stable",
         "behat/mink": "1.5@stable",
         "behat/mink-goutte-driver": "*",
-       "behat/mink-extension": "*"
+        "behat/mink-extension": "*",
+        "behat/mink-selenium-driver": "*",
+        "behat/mink-selenium2-driver": "*"
     },
     "minimum-stability": "dev",
     "config": {
