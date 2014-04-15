@@ -6,3 +6,4 @@ Feature: Search
   Scenario: Searching for a page that does exist
     Given I am on the homepage
     Then I should see "Symfony2"
+    Then I click on the element "h2.resume_section_title"
