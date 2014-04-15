@@ -1,10 +1,16 @@
-Feature: Analyze wiki page
-  In order to learn working with Behat
-  As a tester
-  I need to write a first test
+Feature: Search
+  In order to see a word definition
+  As a website user
+  I need to be able to search for a word
 
-Scenario: Find a link and click on it
-  Given I am on the homepage
-  Then print current URL
-  Then I should see "A continual improvement process"
+  Scenario: Searching for a page that does exist
+    Given I am on "/wiki/Main_Page"
+    When I fill in "search" with "Behavior Driven Development"
+    And I press "searchButton"
+    Then I should see "agile software development"
 
+  Scenario: Searching for a page that does NOT exist
+    Given I am on "/wiki/Main_Page"
+    When I fill in "search" with "Glory Driven Development"
+    And I press "searchButton"
+    Then I should see "Search results"
