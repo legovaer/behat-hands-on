@@ -1,12 +1,12 @@
-Feature: visitBlog
-  In order to visit levi's blog page
-  As a visitor of legovaer.be
-  I need to click on the 'pencil' button
+Feature: Analyze wiki page
+  In order to learn working with Behat
+  As a tester
+  I need to write a first test
 
-Scenario: Click the 'pencil' button
+Scenario: Find a link and click on it
   Given I am on the homepage
-  When I follow "blog_page_link"
-  Then I should be on "/blog"
-  And I should see "Hello world"
+  When I follow "business process management"
+  Then I should be on "http://en.wikipedia.org/wiki/Business_process_management"
+  And I should see "Business process management"
   Then print current URL
 
