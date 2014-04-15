@@ -3,6 +3,7 @@ Feature: Search
   As a website user
   I need to be able to search for a word
 
+  @javascript
   Scenario: Searching for a page that does exist
     Given I am on the homepage
     Then I should see "Symfony2"
