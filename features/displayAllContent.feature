@@ -5,5 +5,5 @@ Feature: Displaying all content on the frontpage
 
 @javascript  
 Scenario: Show Levi's resume
- When I click on "h2.resume_section_tile"
+ When I click on "h2.resume_section_title"
  Then I should see "Consultant @ Capgemini"
