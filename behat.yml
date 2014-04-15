@@ -2,7 +2,7 @@ default:
   extensions:
     Behat\MinkExtension\Extension:
       default_session: "goutte"
-      base_url: "http://en.wikipedia.org/wiki/Continual_improvement_process"
+      base_url: "http://www.legovaer.be"
       selenium2:
         browser: firefox
         wd_host: 127.0.0.1:4444/wd/hub
