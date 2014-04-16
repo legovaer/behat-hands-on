@@ -6,5 +6,25 @@ Feature: Displaying all content on the frontpage
 @javascript
 Scenario: Show Levi's resume
   Given I am on the homepage
-  Then I click on the element "h2.resume_section_title"
+  When I click on the element "h2.resume_section_title"
   Then I should see "Consultant @ Capgemini"
+  And I should see "Company Owner @ webAppeal"
+  And I should see "Different roles @ Vrije Universiteit Brussel"
+  And I should see "Working @ Mise en Place while studying"
+  And I should see "Internship @ ThinkMedia Magazines"
+  And I should see "Learning the basics @ WebXpress"
+  And I should see "DM-TRAINET @ European Commission"
+  And I should see "Drupal modules knowledge"
+
+@javascript
+Scenario: Show Levi's testimonials
+  Given I am on the homepage
+  When I click on the element "h2.testi_section_title"
+  Then I should see "First I was afraid of the result of the project, but you managed to put a smile on myface!"
+
+@javascript
+Scenario: Show the contact part
+  Given I am on the homepage
+  When I click on the element "section#block-panels-mini-map-and-contacts"
+  Then I should see "2" "input" elements
+  And I should see "1" "textarea" element
