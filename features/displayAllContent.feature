@@ -20,11 +20,10 @@ Scenario: Show Levi's resume
 Scenario: Show Levi's testimonials
   Given I am on the homepage
   When I click on the element "h2.testi_section_title"
-  Then I should see "you managed to put a smile on my face!"
+  Then I should see "Roberto Schiliro"
 
 @javascript
 Scenario: Show the contact part
   Given I am on the homepage
   When I click on the element "section#block-panels-mini-map-and-contacts"
-  Then I should see 2 "input" elements
-  And I should see 1 "textarea" element
+  Then I should see "Let's keep in touch"
