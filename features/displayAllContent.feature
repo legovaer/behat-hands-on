@@ -21,3 +21,9 @@ Scenario: Show Levi's testimonials
   Given I am on the homepage
   When I click on the element "h2.testi_section_title"
   Then I should see "Roberto Schiliro"
+
+@javascript
+Scenario: Show Levi's contact details
+  Given I am on the homepage
+  When I click on the element "section#block-panels-mini-map-and-contacts"
+  Then I should see "Contact info"
