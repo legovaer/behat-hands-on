@@ -4,7 +4,7 @@ Feature: Display all content on the FrontPage
  I should click on all the colored links
  
 @javascript
-Scenario: Show Levi's resume
+Scenario: Show Levi's resume - Raman
   Given I am on the homepage
   When I click on the element "h2.resume_section_title"
   Then I should see "Consultant @ Capgemini"
