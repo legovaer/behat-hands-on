@@ -1,11 +1,9 @@
-Feature: Search
-  In order to see a word definition
-  As a website user
-  I need to be able to search for a word
+Feature: Testing Behat
+  In order to start testing with Behat
+  As a tester
+  I need to learn to write scenario's and features
 
   @javascript
   Scenario: Searching for a page that does exist
     Given I am on the homepage
-    Then I should see "Symfony2"
-    Then I click on the element "h2.resume_section_title"
-    Then I should see "webAppeal"
+    Then I should see "Senior Drupal Developer"
