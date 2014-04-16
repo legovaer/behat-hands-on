@@ -15,3 +15,9 @@ Scenario: Show Levi's resume
   And I should see "Learning the basics @ WebXpress"
   And I should see "DM-TRAINET @ European Commission"
   And I should see "Drupal modules knowledge"
+
+@javascript
+Scenario: Show Levi's testimonials
+  Given I am on the homepage
+  When I click on the element "h2.testi_section_title"
+  Then I should see "Roberto Schiliro"
