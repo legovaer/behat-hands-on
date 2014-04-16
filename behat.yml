@@ -1,7 +1,8 @@
 default:
   extensions:
     Behat\MinkExtension\Extension:
-      base_url: "http://legovaer.be"
+      default_session: "goutte"
+      base_url: "http://www.legovaer.be"
       selenium2:
         browser: firefox
         wd_host: 127.0.0.1:4444/wd/hub

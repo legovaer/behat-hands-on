@@ -35,19 +35,21 @@ class FeatureContext extends MinkContext
         // Initialize your context here
     }
 
-    /**
-     * @Given /^I click on "([^"]*)"$/
+    /** Click on the element with the provided xpath query
+     *
+     * @When /^(?:|I )click on the element "([^"]*)"$/
      */
-    public function iClickOn($argument) {
-        $session = $this->getSession();
-        $element = $session->getPage()->find(
-            'xpath',
-            $session->getSelectorsHandler()->selectorToXpath('css',$argument)
-        );
+    public function iClickOnTheElement($locator)
+    {
+        $session = $this->getSession(); // get the mink session
+        $element = $session->getPage()->find('css', $locator); // runs the actual query and returns the element
+
+        // errors must not pass silently
         if (null === $element) {
-            throw new \InvalidArgumentException(sprintf('Could not evaluate CSS Selector: "%s"', $argument));
+            throw new \InvalidArgumentException(sprintf('Could not evaluate CSS selector: "%s"', $locator));
         }
 
+        // ok, let's click on it
         $element->click();
     }
 
