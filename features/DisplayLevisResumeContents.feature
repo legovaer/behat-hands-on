@@ -12,4 +12,15 @@ Scenario: Show Levi's resume - Raman
   And I should see "Different roles @ Vrije Universiteit Brussel"
   And I should see "Working @ Mise en Place while studying"
   And I should see "DM-TRAINET @ European Commission"
-  
+
+@javascript
+Scenario: Show Levi's Testimonials - Raman
+ Given I am on the homepage
+ When I click on the element "h2.testi_section_title"
+ Then I should see "Roberto Schiliro"
+ 
+@javascript
+Scenario: Show Levi's Contacts - Raman
+ Given I am on the homepage
+ When I click on the element " "
+ Then I should see "CONTACT INFO"
