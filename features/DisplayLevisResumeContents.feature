@@ -18,9 +18,3 @@ Scenario: Show Levi's Testimonials - Raman
  Given I am on the homepage
  When I click on the element "h2.testi_section_title"
  Then I should see "Roberto Schiliro"
- 
-@javascript
-Scenario: Show Levi's Contacts - Raman
- Given I am on the homepage
- When I click on the element "h2."
- Then I should see "CONTACT INFO"
