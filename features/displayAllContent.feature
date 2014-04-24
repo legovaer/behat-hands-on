@@ -3,7 +3,7 @@ Feature: Displaying all content on the frontpage
   As an anonymous user
   I should click on all the colored links.
 
-@javascript
+@javascript @multibrowsers
 Scenario: Show Levi's resume
   Given I am on the homepage
   When I click on the element "h2.resume_section_title"
