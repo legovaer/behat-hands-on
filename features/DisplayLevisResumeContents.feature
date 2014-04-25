@@ -7,12 +7,12 @@ Feature: Display all content on the FrontPage
 Scenario: Show Levi's Profile - Raman
  Given I am on the homepage
  When I click on the element "h2.profile_section_title"
- Then I should see "Name: Levi Govaerts"
- And I should see "Date of birth: Tuesday, June 16, 1987"
- And I should see "Address: Borgerhout, Antwerp, Belgium"
- And I should see "Phone: +32 474 25 42 89"
- And I should see "Email: legovaer (at) me (dot) com"
- And I should see "Website: http://legovaer.me"
+ Then I should not see "Name: Levi Govaerts"
+ And I should not see "Date of birth: Tuesday, June 16, 1987"
+ And I should not see "Address: Borgerhout, Antwerp, Belgium"
+ And I should not see "Phone: +32 474 25 42 89"
+ And I should not see "Email: legovaer (at) me (dot) com"
+ And I should not see "Website: http://legovaer.me"
  
 @javascript
 Scenario: Show Levi's resume - Raman
