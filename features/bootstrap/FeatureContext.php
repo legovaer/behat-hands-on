@@ -33,6 +33,18 @@ class FeatureContext extends MinkContext
     public function __construct(array $parameters)
     {
         // Initialize your context here
+        $this->params = $parameters;
+    }
+
+
+    /** @BeforeScenario @multibrowsers
+     * Output the information that is needed for the SauceLabs OnDemand plugin in Jenkins
+     */
+    public function before($event)
+    {
+        $sessID = basename($this->getSession()->getDriver()->getWebDriverSession()->getUrl());
+        isset($this->params['test_name']) ? $jobname = $this->params['test_name'] : $jobname = "Behat test ".date("d/m/Y H:i");
+        echo "SauceOnDemandSessionID=".$sessID." job-name=".$jobname."\n";
     }
 
     /** Click on the element with the provided xpath query
