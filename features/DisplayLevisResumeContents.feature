@@ -22,7 +22,7 @@ Scenario: Show Levi's resume - Raman
   And I should see "Company Owner @ webAppeal"
   And I should see "Different roles @ Vrije Universiteit Brussel"
   And I should see "Working @ Mise en Place while studying"
-  And I should see "DM-TRAINET @ European Commission"
+  
 
 @javascript
 Scenario: Show Levi's Testimonials - Raman
