@@ -1,0 +1,26 @@
+<?php
+class Example extends PHPUnit_Extensions_SeleniumTestCase
+{
+  protected function setUp()
+  {
+    $this->setBrowser("*chrome");
+    $this->setBrowserUrl("http://bpack247-1.stbpost.be/");
+  }
+
+  public function testMyTestCase()
+  {
+    $this->open("/");
+    $this->click("//div[@id='block-system-main']/div/div/div/a[2]/span/p");
+    $this->waitForPageToLoad("30000");
+    $this->click("id=edit-alternate-address-options-yes");
+    $this->type("id=edit-street", $this->getEval("\"uvu\" + Math.floor(Math.random()*15000) + \"street\";"));
+    $this->type("id=edit-house-number", "3");
+    $this->type("id=ediet-box", "3");
+    $this->type("id=edit-municipality", "2000 - ANTWERPEN");
+    $this->click("id=edit-chk-terms-conditions");
+    $this->click("id=edit-submit");
+    $this->waitForPageToLoad("30000");
+    $this->assertEquals("E", $this->getText("css=div.region-inner.region-content-inner > div"));
+  }
+}
+?>
